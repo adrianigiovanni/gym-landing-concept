@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Community | Hollowbar</title>
+<meta name="description" content="Life at Hollowbar, a fictional strength and conditioning gym: a concept landing page."/>
+<meta property="og:title" content="Community | Hollowbar"/>
+<meta property="og:description" content="Life at Hollowbar, a fictional strength and conditioning gym: a concept landing page."/>
+<meta property="og:type" content="website"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232D2D2D'/%3E%3Crect x='10' y='29' width='44' height='6' fill='%238E1B1B'/%3E%3Crect x='14' y='18' width='6' height='28' fill='%23F9F9F9'/%3E%3Crect x='44' y='18' width='6' height='28' fill='%23F9F9F9'/%3E%3C/svg%3E"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary": "#5f5e5e",
+                        "on-secondary-container": "#656464",
+                        "surface-container": "#eeeeee",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#410003",
+                        "tertiary-fixed": "#c9e6ff",
+                        "surface": "#f9f9f9",
+                        "secondary-fixed": "#e4e2e1",
+                        "inverse-on-surface": "#f1f1f1",
+                        "on-tertiary-fixed": "#001e2f",
+                        "tertiary": "#003651",
+                        "surface-tint": "#ac322e",
+                        "outline-variant": "#e0bfbc",
+                        "on-surface": "#1a1c1c",
+                        "surface-container-highest": "#e2e2e2",
+                        "on-error": "#ffffff",
+                        "on-surface-variant": "#58413f",
+                        "on-secondary-fixed-variant": "#474747",
+                        "on-tertiary-container": "#87bfe8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#6c0008",
+                        "secondary-fixed-dim": "#c8c6c6",
+                        "surface-variant": "#e2e2e2",
+                        "on-secondary-fixed": "#1b1c1c",
+                        "on-background": "#1a1c1c",
+                        "inverse-primary": "#ffb3ac",
+                        "surface-container-low": "#f3f3f3",
+                        "inverse-surface": "#2f3131",
+                        "secondary-container": "#e4e2e1",
+                        "tertiary-fixed-dim": "#95cdf7",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#004b6f",
+                        "on-primary-fixed-variant": "#8b1919",
+                        "primary-fixed-dim": "#ffb3ac",
+                        "primary-container": "#8e1b1b",
+                        "surface-dim": "#dadada",
+                        "tertiary-container": "#004e72",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#ffdad6",
+                        "surface-container-high": "#e8e8e8",
+                        "surface-bright": "#f9f9f9",
+                        "background": "#f9f9f9",
+                        "outline": "#8c716e",
+                        "on-primary-container": "#ff9e95",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "fontFamily": {
+                        "headline": ["Epilogue"],
+                        "body": ["Inter"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-clip {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0% 100%);
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+        @media (max-width: 767px) {
+            .editorial-grid {
+                grid-template-columns: 1fr;
+            }
+            .editorial-grid > * {
+                grid-column: 1 / -1 !important;
+            }
+            section { overflow-x: hidden; }
+        }
+    </style>
+
+    <style>
+        /* Mobile menu */
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 60; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: #1a1c1c; margin: 6px 0; transition: all 0.3s; }
+        .mobile-menu-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; background: rgba(249,249,249,0.98); z-index: 55; 
+            flex-direction: column; justify-content: center; align-items: center; gap: 2rem; backdrop-filter: blur(20px); }
+        .mobile-nav-overlay.active { display: flex; }
+        .mobile-nav-overlay a { font-family: 'Epilogue', sans-serif; font-size: 1.5rem; font-weight: 900; 
+            text-transform: uppercase; letter-spacing: -0.025em; color: #1a1c1c; text-decoration: none; 
+            padding: 0.75rem 2rem; transition: color 0.2s; }
+        .mobile-nav-overlay a:hover, .mobile-nav-overlay a.active-link { color: #8E1B1B; }
+        @media (max-width: 767px) {
+            .mobile-menu-btn { display: block; }
+            body { overflow-x: hidden; }
+            nav > div { max-width: 100vw !important; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/90 dark:bg-stone-950/90 backdrop-blur-xl shadow-sm dark:shadow-none">
+<div class="flex justify-between items-center px-8 py-4 max-w-full">
+<div class="text-2xl font-black tracking-tighter text-stone-900 dark:text-stone-100">HOLLOWBAR</div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="index.html">HOME</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-sm text-stone-600 dark:text-stone-400 hover:text-stone-900 dark:hover:text-stone-100 transition-colors" href="schedule.html">SCHEDULE &amp; PRICING</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-sm text-red-900 dark:text-red-600 border-b-2 border-red-900 dark:border-red-600 pb-1" href="community.html">COMMUNITY</a>
+</div>
+<button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-headline text-sm font-bold tracking-tight hover:opacity-80 transition-opacity active:scale-95 duration-150">
+                FREE TRIAL
+            </button>
+</div>
+</nav>
+    <div class="mobile-nav-overlay">
+        <a href="index.html">HOME</a>
+        <a href="schedule.html">SCHEDULE & PRICING</a>
+        <a href="community.html" class="active-link">COMMUNITY</a>
+        <a href="#" style="margin-top:1rem; font-size:1rem; background:#6c0008; color:white; padding:1rem 2rem; border-radius:0.5rem;">FREE TRIAL</a>
+    </div>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[716px] flex items-center overflow-hidden bg-stone-900">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" alt="Group of athletes cheering in a dark industrial gym" src="images/community-hero.webp" loading="lazy"/>
+</div>
+<div class="relative z-10 px-8 md:px-24 w-full">
+<div class="max-w-4xl">
+<span class="inline-block text-primary bg-on-primary-fixed-variant/10 px-3 py-1 rounded-full text-xs font-bold tracking-widest uppercase mb-6">The Hollowbar Spirit</span>
+<h1 class="font-headline text-5xl md:text-8xl text-surface font-black tracking-tighter leading-none mb-8">
+                        WELCOME TO THE HOLLOWBAR CREW
+                    </h1>
+<p class="text-stone-300 text-lg md:text-xl max-w-xl leading-relaxed">
+                        More than a gym: a place to push past your limits, where every drop of sweat builds bonds that last.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Hollowbar Spirit Section -->
+<section class="py-24 px-8 md:px-24 bg-surface overflow-hidden">
+<div class="editorial-grid gap-12 items-center">
+<div class="col-span-12 md:col-span-5">
+<h2 class="font-headline text-3xl md:text-5xl font-black tracking-tighter text-on-surface mb-8">THE HOLLOWBAR SPIRIT</h2>
+<div class="space-y-6 text-on-surface-variant text-lg leading-relaxed">
+<p>
+                            At Hollowbar, we believe individual performance grows out of the strength of the group. Our walls are concrete and steel, but what really holds them up is the noise we make for the last person still finishing the WOD.
+                        </p>
+<p>
+                            No judgement here, just a shared goal: becoming a better version of yourself, together. Helping each other is our only golden rule.
+                        </p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 relative" style="max-width:100%;">
+<div class="aspect-square bg-surface-container-high rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" alt="Two athletes bumping fists after a workout" src="images/fist-bump.webp" loading="lazy"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-primary-container p-8 rounded-xl shadow-xl hidden md:block">
+<span class="font-headline text-4xl text-on-primary-container font-black leading-none italic uppercase">STRONGER TOGETHER</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Instagram-style Immersive Gallery -->
+<section class="py-24 bg-surface-container-low">
+<div class="px-8 md:px-24 mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter text-on-surface">IMMERSION</h2>
+<p class="text-on-surface-variant mt-4 font-medium uppercase tracking-widest text-sm">Everyday life at the box</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary text-4xl">photo_camera</span>
+<span class="font-bold text-lg">#HOLLOWBARCREW</span>
+</div>
+</div>
+<!-- Bento Grid Gallery -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-2 px-2 md:px-4" style="max-width:100vw; overflow:hidden;">
+<div class="aspect-square overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer scale-105 group-hover:scale-100" alt="Row of squat racks and benches in a brick-walled gym" src="images/equipment-row.webp" loading="lazy"/>
+</div>
+<div class="aspect-square overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer scale-105 group-hover:scale-100" alt="Three athletes chatting and laughing after class" src="images/athletes-talking.webp" loading="lazy"/>
+</div>
+<div class="aspect-square md:row-span-2 md:col-span-2 overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer scale-105 group-hover:scale-100" alt="Gym community group photo" src="images/group-photo.webp" loading="lazy"/>
+</div>
+<div class="aspect-square overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer scale-105 group-hover:scale-100" alt="Athlete setting up for a heavy deadlift" src="images/deadlift-setup.webp" loading="lazy"/>
+</div>
+<div class="aspect-square overflow-hidden group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 cursor-pointer scale-105 group-hover:scale-100" alt="Athlete holding a plank on two dumbbells" src="images/dumbbell-plank.webp" loading="lazy"/>
+</div>
+</div>
+</section>
+<!-- Events Section (loaded from events.json) -->
+<section class="py-24 px-8 md:px-24 bg-surface">
+<div class="mb-16">
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter text-on-surface">EVENTS</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<div id="events-grid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+</div>
+</section>
+<script>
+  fetch('events.json')
+    .then(r => r.json())
+    .then(events => {
+      const grid = document.getElementById('events-grid');
+      events.forEach(e => {
+        const card = document.createElement('div');
+        card.className = 'bg-surface-container-low p-1 rounded-xl group cursor-pointer transition-transform duration-300 hover:-translate-y-2';
+        card.innerHTML = `
+          <div class="aspect-[4/5] rounded-lg overflow-hidden mb-6">
+            <img class="w-full h-full object-cover" alt="${e.alt}" src="${e.image}" loading="lazy"/>
+          </div>
+          <div class="p-4">
+            <div class="flex justify-between items-start mb-4">
+              <span class="text-xs font-bold text-primary tracking-widest uppercase">${e.category}</span>
+              <span class="text-xs font-bold text-on-surface-variant">${e.date}</span>
+            </div>
+            <h3 class="font-headline text-2xl font-black tracking-tight mb-2">${e.title}</h3>
+            <p class="text-on-surface-variant text-sm mb-6">${e.description}</p>
+            <div class="flex items-center text-primary font-bold text-sm tracking-tighter group-hover:gap-2 transition-all">
+              ${e.link_text} <span class="material-symbols-outlined ml-1">arrow_forward</span>
+            </div>
+          </div>`;
+        grid.appendChild(card);
+      });
+    })
+    .catch(err => console.error('Could not load events:', err));
+</script>
+<!-- Class Format -->
+<section class="py-24 px-8 md:px-24 bg-surface-container-low">
+<h2 class="font-headline text-4xl md:text-6xl font-black tracking-tighter text-on-surface mb-4 max-w-2xl">ONE HOUR, THREE PARTS</h2>
+<p class="text-on-surface-variant text-lg mb-16 max-w-xl">Every class follows the same backbone, whatever your level.</p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div>
+<span class="font-headline text-5xl font-black text-primary">01</span>
+<h3 class="font-headline text-2xl font-black tracking-tight mt-4 mb-3">WARM-UP</h3>
+<p class="text-on-surface-variant leading-relaxed">Raise the temperature and open up the joints you will need for the day.</p>
+</div>
+<div>
+<span class="font-headline text-5xl font-black text-primary">02</span>
+<h3 class="font-headline text-2xl font-black tracking-tight mt-4 mb-3">SKILL &amp; STRENGTH</h3>
+<p class="text-on-surface-variant leading-relaxed">One movement, worked properly: technique first, then load.</p>
+</div>
+<div>
+<span class="font-headline text-5xl font-black text-primary">03</span>
+<h3 class="font-headline text-2xl font-black tracking-tight mt-4 mb-3">WOD</h3>
+<p class="text-on-surface-variant leading-relaxed">The workout of the day, scaled to where you are. The last one to finish gets the loudest cheer.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200 dark:border-stone-800 bg-stone-100 dark:bg-stone-950">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+<div class="text-xl font-black text-stone-900 dark:text-stone-100">HOLLOWBAR</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase font-semibold text-stone-500 hover:text-red-900 dark:hover:text-red-600 transition-colors" href="#">INSTAGRAM</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase font-semibold text-stone-500 hover:text-red-900 dark:hover:text-red-600 transition-colors" href="#">FACEBOOK</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase font-semibold text-stone-500 hover:text-red-900 dark:hover:text-red-600 transition-colors" href="#">CONTACT</a>
+</div>
+<div class="font-['Inter'] text-xs tracking-widest uppercase font-semibold text-stone-500 text-center md:text-right">
+                Concept design. Fictional brand, not a real business. Images are AI-generated.
+            </div>
+</div>
+</footer>
+
+    <script>
+        // Mobile hamburger menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.mobile-menu-btn');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            if (btn && overlay) {
+                btn.addEventListener('click', () => {
+                    btn.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                    document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+                });
+                overlay.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        btn.classList.remove('active');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Schedule &amp; Pricing | Hollowbar</title>
+<meta name="description" content="Class schedule and memberships of Hollowbar, a fictional gym: a concept landing page."/>
+<meta property="og:title" content="Schedule &amp; Pricing | Hollowbar"/>
+<meta property="og:description" content="Class schedule and memberships of Hollowbar, a fictional gym: a concept landing page."/>
+<meta property="og:type" content="website"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%232D2D2D'/%3E%3Crect x='10' y='29' width='44' height='6' fill='%238E1B1B'/%3E%3Crect x='14' y='18' width='6' height='28' fill='%23F9F9F9'/%3E%3Crect x='44' y='18' width='6' height='28' fill='%23F9F9F9'/%3E%3C/svg%3E"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@700;800;900&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary": "#5f5e5e",
+                      "on-secondary-container": "#656464",
+                      "surface-container": "#eeeeee",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#410003",
+                      "tertiary-fixed": "#c9e6ff",
+                      "surface": "#f9f9f9",
+                      "secondary-fixed": "#e4e2e1",
+                      "inverse-on-surface": "#f1f1f1",
+                      "on-tertiary-fixed": "#001e2f",
+                      "tertiary": "#003651",
+                      "surface-tint": "#ac322e",
+                      "outline-variant": "#e0bfbc",
+                      "on-surface": "#1a1c1c",
+                      "surface-container-highest": "#e2e2e2",
+                      "on-error": "#ffffff",
+                      "on-surface-variant": "#58413f",
+                      "on-secondary-fixed-variant": "#474747",
+                      "on-tertiary-container": "#87bfe8",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#6c0008",
+                      "secondary-fixed-dim": "#c8c6c6",
+                      "surface-variant": "#e2e2e2",
+                      "on-secondary-fixed": "#1b1c1c",
+                      "on-background": "#1a1c1c",
+                      "inverse-primary": "#ffb3ac",
+                      "surface-container-low": "#f3f3f3",
+                      "inverse-surface": "#2f3131",
+                      "secondary-container": "#e4e2e1",
+                      "tertiary-fixed-dim": "#95cdf7",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#004b6f",
+                      "on-primary-fixed-variant": "#8b1919",
+                      "primary-fixed-dim": "#ffb3ac",
+                      "primary-container": "#8e1b1b",
+                      "surface-dim": "#dadada",
+                      "tertiary-container": "#004e72",
+                      "error-container": "#ffdad6",
+                      "on-error-container": "#93000a",
+                      "primary-fixed": "#ffdad6",
+                      "surface-container-high": "#e8e8e8",
+                      "surface-bright": "#f9f9f9",
+                      "background": "#f9f9f9",
+                      "outline": "#8c716e",
+                      "on-primary-container": "#ff9e95",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "fontFamily": {
+                      "headline": [
+                              "Epilogue"
+                      ],
+                      "body": [
+                              "Inter"
+                      ],
+                      "label": [
+                              "Inter"
+                      ]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .industrial-grid {
+            background-image: radial-gradient(circle, #e2e2e2 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .oxblood-gradient {
+            background: linear-gradient(135deg, #6c0008 0%, #8e1b1b 100%);
+        }
+    </style>
+
+    <style>
+        /* Mobile menu */
+        .mobile-menu-btn { display: none; background: none; border: none; cursor: pointer; padding: 8px; z-index: 60; }
+        .mobile-menu-btn span { display: block; width: 24px; height: 2px; background: #1a1c1c; margin: 6px 0; transition: all 0.3s; }
+        .mobile-menu-btn.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 6px); }
+        .mobile-menu-btn.active span:nth-child(2) { opacity: 0; }
+        .mobile-menu-btn.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -6px); }
+        .mobile-nav-overlay { display: none; position: fixed; inset: 0; background: rgba(249,249,249,0.98); z-index: 55; 
+            flex-direction: column; justify-content: center; align-items: center; gap: 2rem; backdrop-filter: blur(20px); }
+        .mobile-nav-overlay.active { display: flex; }
+        .mobile-nav-overlay a { font-family: 'Epilogue', sans-serif; font-size: 1.5rem; font-weight: 900; 
+            text-transform: uppercase; letter-spacing: -0.025em; color: #1a1c1c; text-decoration: none; 
+            padding: 0.75rem 2rem; transition: color 0.2s; }
+        .mobile-nav-overlay a:hover, .mobile-nav-overlay a.active-link { color: #8E1B1B; }
+        @media (max-width: 767px) {
+            .mobile-menu-btn { display: block; }
+            body { overflow-x: hidden; }
+            nav > div { max-width: 100vw !important; }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-white">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-stone-50/90 backdrop-blur-xl shadow-sm">
+<div class="flex justify-between items-center px-8 py-4 max-w-full">
+<span class="text-2xl font-black tracking-tighter text-stone-900">HOLLOWBAR</span>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-sm text-stone-600 hover:text-stone-900 transition-colors" href="index.html">HOME</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-sm text-red-900 border-b-2 border-red-900 pb-1" href="schedule.html">SCHEDULE &amp; PRICING</a>
+<a class="font-['Epilogue'] tracking-tighter uppercase font-bold text-sm text-stone-600 hover:text-stone-900 transition-colors" href="community.html">COMMUNITY</a>
+</div>
+<button class="mobile-menu-btn" aria-label="Menu"><span></span><span></span><span></span></button>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-['Epilogue'] font-bold text-sm tracking-tighter hover:bg-primary-container transition-all active:scale-95 duration-150 uppercase">
+                FREE TRIAL
+            </button>
+</div>
+</nav>
+    <div class="mobile-nav-overlay">
+        <a href="index.html">HOME</a>
+        <a href="schedule.html" class="active-link">SCHEDULE & PRICING</a>
+        <a href="community.html">COMMUNITY</a>
+        <a href="#" style="margin-top:1rem; font-size:1rem; background:#6c0008; color:white; padding:1rem 2rem; border-radius:0.5rem;">FREE TRIAL</a>
+    </div>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[614px] flex items-center overflow-hidden bg-surface-container-lowest industrial-grid">
+<div class="absolute inset-0 bg-gradient-to-r from-surface to-transparent z-10"></div>
+<div class="container mx-auto px-8 relative z-20">
+<span class="label-md uppercase tracking-[0.2em] font-bold text-primary mb-4 block">INDUSTRIAL-GRADE TRAINING</span>
+<h1 class="font-headline text-6xl md:text-8xl font-black tracking-tighter leading-none text-stone-900 max-w-4xl">
+                    THE SCHEDULE <br/>
+<span class="text-primary">&amp; PRICING</span>
+</h1>
+<p class="mt-8 text-lg text-secondary-fixed-variant max-w-xl font-medium leading-relaxed">
+                    A raw space and precise programming. Check the class times and pick the commitment that matches your goals.
+                </p>
+</div>
+<div class="absolute right-0 top-0 w-1/2 h-full opacity-10 md:opacity-100 mix-blend-multiply md:mix-blend-normal">
+<img class="w-full h-full object-cover grayscale brightness-75" alt="Empty industrial gym with a pull-up rig and concrete walls" src="images/schedule-hero.webp" loading="lazy"/>
+</div>
+</section>
+<!-- Schedule Section -->
+<section class="py-24 bg-surface">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-headline text-4xl font-extrabold tracking-tighter text-stone-900 uppercase">The Training Week</h2>
+<div class="h-1 w-24 bg-primary mt-4"></div>
+</div>
+<div class="flex flex-wrap gap-4">
+<span class="px-4 py-1 bg-stone-900 text-white text-xs font-bold rounded-full">WOD</span>
+<span class="px-4 py-1 bg-stone-200 text-stone-600 text-xs font-bold rounded-full">FOUNDATION</span>
+<span class="px-4 py-1 bg-primary text-white text-xs font-bold rounded-full">OPEN GYM</span>
+<span class="px-4 py-1 border border-stone-300 text-stone-500 text-xs font-bold rounded-full">YOGA/MOBILITY</span>
+</div>
+</div>
+<div class="overflow-x-auto bg-surface-container-lowest rounded-xl shadow-sm">
+<table class="w-full border-collapse">
+<thead>
+<tr class="bg-stone-50">
+<th class="p-6 text-left font-headline font-black text-stone-400 text-xs tracking-widest border-b border-stone-100">TIME</th>
+<th class="p-6 text-left font-headline font-black text-stone-900 text-xs tracking-widest border-b border-stone-100 uppercase">Monday</th>
+<th class="p-6 text-left font-headline font-black text-stone-900 text-xs tracking-widest border-b border-stone-100 uppercase">Tuesday</th>
+<th class="p-6 text-left font-headline font-black text-stone-900 text-xs tracking-widest border-b border-stone-100 uppercase">Wednesday</th>
+<th class="p-6 text-left font-headline font-black text-stone-900 text-xs tracking-widest border-b border-stone-100 uppercase">Thursday</th>
+<th class="p-6 text-left font-headline font-black text-stone-900 text-xs tracking-widest border-b border-stone-100 uppercase">Friday</th>
+<th class="p-6 text-left font-headline font-black text-stone-900 text-xs tracking-widest border-b border-stone-100 uppercase text-primary">Saturday</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-stone-50">
+<tr>
+<td class="p-6 font-bold text-stone-400 text-sm">07:00</td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-200 text-stone-600 p-3 rounded-lg text-xs font-bold">FOUNDATION</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-primary text-white p-3 rounded-lg text-xs font-bold">OPEN GYM</div></td>
+</tr>
+<tr>
+<td class="p-6 font-bold text-stone-400 text-sm">12:30</td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-primary text-white p-3 rounded-lg text-xs font-bold shadow-sm">OPEN GYM</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-200 text-stone-600 p-3 rounded-lg text-xs font-bold">FOUNDATION</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold">WOD TEAM</div></td>
+</tr>
+<tr>
+<td class="p-6 font-bold text-stone-400 text-sm">17:00</td>
+<td class="p-4"><div class="bg-stone-200 text-stone-600 p-3 rounded-lg text-xs font-bold">FOUNDATION</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-primary text-white p-3 rounded-lg text-xs font-bold shadow-sm">OPEN GYM</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="border border-stone-300 text-stone-500 p-3 rounded-lg text-xs font-bold">YOGA</div></td>
+</tr>
+<tr>
+<td class="p-6 font-bold text-stone-400 text-sm">19:30</td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"><div class="bg-stone-200 text-stone-600 p-3 rounded-lg text-xs font-bold">FOUNDATION</div></td>
+<td class="p-4"><div class="bg-stone-900 text-white p-3 rounded-lg text-xs font-bold shadow-sm">WOD</div></td>
+<td class="p-4"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<!-- Pricing Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden relative">
+<div class="container mx-auto px-8 relative z-10">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl font-black tracking-tighter text-stone-900 uppercase">Memberships</h2>
+<p class="text-stone-500 mt-4 max-w-2xl mx-auto font-medium">No hidden sign-up fees. Just iron and hard work.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+<!-- Starter -->
+<div class="bg-surface-container-lowest p-10 rounded-xl flex flex-col hover:shadow-xl transition-shadow duration-300">
+<span class="text-stone-400 font-black text-xs tracking-widest uppercase mb-2">Getting Started</span>
+<h3 class="font-headline text-3xl font-extrabold text-stone-900 mb-6">STARTER</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-4xl font-black text-stone-900 tracking-tighter">€65</span>
+<span class="text-stone-400 font-bold uppercase text-xs">/ month</span>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center gap-3 text-sm font-medium text-stone-600">
+<span class="material-symbols-outlined text-stone-900 text-sm">check_circle</span>
+                                2 classes per week
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-stone-600">
+<span class="material-symbols-outlined text-stone-900 text-sm">check_circle</span>
+                                Hollowbar app access
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-stone-600">
+<span class="material-symbols-outlined text-stone-900 text-sm">check_circle</span>
+                                Locker rooms &amp; showers
+                            </li>
+</ul>
+<button class="w-full py-4 border-2 border-stone-200 text-stone-900 font-bold uppercase text-xs tracking-widest rounded-lg hover:bg-stone-900 hover:text-white transition-all">Sign up</button>
+</div>
+<!-- Standard (Popular) -->
+<div class="bg-white p-10 rounded-xl flex flex-col ring-2 ring-primary relative transform md:-translate-y-4 shadow-2xl">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white px-4 py-1 rounded-full text-[10px] font-black tracking-widest uppercase">
+                            MOST POPULAR
+                        </div>
+<span class="text-primary font-black text-xs tracking-widest uppercase mb-2">Performance</span>
+<h3 class="font-headline text-3xl font-extrabold text-stone-900 mb-6">STANDARD</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-4xl font-black text-stone-900 tracking-tighter">€90</span>
+<span class="text-stone-400 font-bold uppercase text-xs">/ month</span>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center gap-3 text-sm font-medium text-stone-900">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Unlimited classes
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-stone-900">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Monthly progress check-in
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-stone-900">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Unlimited Open Gym
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-stone-900">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Community events
+                            </li>
+</ul>
+<button class="w-full py-4 oxblood-gradient text-white font-bold uppercase text-xs tracking-widest rounded-lg hover:shadow-lg hover:opacity-90 transition-all">Sign up</button>
+</div>
+<!-- Elite -->
+<div class="bg-surface-container-lowest p-10 rounded-xl flex flex-col hover:shadow-xl transition-shadow duration-300">
+<span class="text-stone-400 font-black text-xs tracking-widest uppercase mb-2">Excellence</span>
+<h3 class="font-headline text-3xl font-extrabold text-stone-900 mb-6">ELITE</h3>
+<div class="flex items-baseline gap-1 mb-8">
+<span class="text-4xl font-black text-stone-900 tracking-tighter">€115</span>
+<span class="text-stone-400 font-bold uppercase text-xs">/ month</span>
+</div>
+<ul class="space-y-4 mb-12 flex-grow">
+<li class="flex items-center gap-3 text-sm font-medium text-stone-600">
+<span class="material-symbols-outlined text-stone-900 text-sm">check_circle</span>
+                                Everything in STANDARD
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-stone-600">
+<span class="material-symbols-outlined text-stone-900 text-sm">check_circle</span>
+                                1 private coaching session / month
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-stone-600">
+<span class="material-symbols-outlined text-stone-900 text-sm">check_circle</span>
+                                Quarterly body composition scan
+                            </li>
+<li class="flex items-center gap-3 text-sm font-medium text-stone-600">
+<span class="material-symbols-outlined text-stone-900 text-sm">check_circle</span>
+                                Personal nutrition plan
+                            </li>
+</ul>
+<button class="w-full py-4 border-2 border-stone-200 text-stone-900 font-bold uppercase text-xs tracking-widest rounded-lg hover:bg-stone-900 hover:text-white transition-all">Sign up</button>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-12 -right-12 opacity-5 pointer-events-none">
+<span class="text-[300px] font-black text-primary leading-none">H</span>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="py-24 bg-surface-container-lowest">
+<div class="container mx-auto px-8 max-w-4xl">
+<h2 class="font-headline text-3xl font-black text-stone-900 uppercase mb-12 tracking-tighter">Frequently Asked Questions</h2>
+<div class="space-y-8">
+<div class="pb-8 border-b border-stone-100 group">
+<button class="flex justify-between items-center w-full text-left">
+<h4 class="font-headline text-lg font-bold text-stone-900">Is there a sign-up fee?</h4>
+<span class="material-symbols-outlined text-primary">add</span>
+</button>
+<p class="mt-4 text-stone-500 text-sm leading-relaxed max-w-2xl">
+                            No. At Hollowbar we keep pricing simple: no sign-up fee and no hidden admin fee. Your first month is all you pay to get started.
+                        </p>
+</div>
+<div class="pb-8 border-b border-stone-100">
+<button class="flex justify-between items-center w-full text-left">
+<h4 class="font-headline text-lg font-bold text-stone-900">Can I switch plans during the year?</h4>
+<span class="material-symbols-outlined text-stone-300">add</span>
+</button>
+</div>
+<div class="pb-8 border-b border-stone-100">
+<button class="flex justify-between items-center w-full text-left">
+<h4 class="font-headline text-lg font-bold text-stone-900">How does the free trial class work?</h4>
+<span class="material-symbols-outlined text-stone-300">add</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Final CTA -->
+<section class="py-32 bg-stone-950 text-white relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover opacity-20" alt="Athlete gripping a loaded barbell in a cloud of chalk" src="images/barbell-chalk.webp" loading="lazy"/>
+<div class="container mx-auto px-8 relative z-10 text-center">
+<h2 class="font-headline text-5xl md:text-7xl font-black tracking-tighter leading-none mb-8 uppercase">
+                    STEP UP <br/>TO THE BAR.
+                </h2>
+<p class="text-stone-400 max-w-lg mx-auto text-lg mb-12 font-medium">
+                    Try our coaching with no commitment. Your first class is on us.
+                </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-lg font-headline font-black tracking-tighter text-lg hover:bg-red-800 transition-all uppercase">
+                        BOOK MY FREE TRIAL
+                    </button>
+<a class="text-white font-bold tracking-widest uppercase text-sm border-b-2 border-primary pb-1 hover:text-primary transition-colors" href="#">
+                        CONTACT US
+                    </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full border-t border-stone-200 bg-stone-100">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8">
+<span class="text-xl font-black text-stone-900">HOLLOWBAR</span>
+<div class="flex gap-8">
+<a class="font-['Inter'] text-xs tracking-widest uppercase font-semibold text-stone-500 hover:text-red-900 transition-colors" href="#">INSTAGRAM</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase font-semibold text-stone-500 hover:text-red-900 transition-colors" href="#">FACEBOOK</a>
+<a class="font-['Inter'] text-xs tracking-widest uppercase font-semibold text-stone-500 hover:text-red-900 transition-colors" href="#">CONTACT</a>
+</div>
+<p class="font-['Inter'] text-xs tracking-widest uppercase font-semibold text-stone-500">
+                Concept design. Fictional brand, not a real business. Images are AI-generated.
+            </p>
+</div>
+</footer>
+
+    <script>
+        // Mobile hamburger menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const btn = document.querySelector('.mobile-menu-btn');
+            const overlay = document.querySelector('.mobile-nav-overlay');
+            if (btn && overlay) {
+                btn.addEventListener('click', () => {
+                    btn.classList.toggle('active');
+                    overlay.classList.toggle('active');
+                    document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : '';
+                });
+                overlay.querySelectorAll('a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        btn.classList.remove('active');
+                        overlay.classList.remove('active');
+                        document.body.style.overflow = '';
+                    });
+                });
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,29 @@
+[
+  {
+    "title": "SUMMER BBQ &amp; GRILL",
+    "date": "JULY",
+    "category": "Social",
+    "description": "Our summer get-together around the grill. Bring a friend, leave with a few more.",
+    "image": "images/event-bbq.webp",
+    "alt": "Members grilling at a summer barbecue",
+    "link_text": "SEE THE PHOTOS"
+  },
+  {
+    "title": "IN-HOUSE OPEN",
+    "date": "SEPTEMBER",
+    "category": "Competition",
+    "description": "Our yearly in-house competition, open to every level, with scaled and Rx divisions.",
+    "image": "images/event-open.webp",
+    "alt": "Athlete squatting a loaded barbell in front of a crowd",
+    "link_text": "SIGN UP"
+  },
+  {
+    "title": "HOLLOWBAR OUTSIDE",
+    "date": "OCTOBER",
+    "category": "Outdoor",
+    "description": "We leave the box for a day of hiking and training outdoors.",
+    "image": "images/event-hike.webp",
+    "alt": "Four hikers on a mountain trail",
+    "link_text": "MORE INFO"
+  }
+]
